@@ -21,6 +21,7 @@
 # Gradle:
 .idea/gradle.xml
 .idea/libraries
+*.iml
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
@@ -35,7 +36,6 @@
 .idea
 .mvn
 mvnw*
-*.iml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
