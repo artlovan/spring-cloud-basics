@@ -2,9 +2,9 @@ Usage:
 ------
 
 1. Start "discovery-server"
-2. Start first instance of "service" with "service.instance.name=instance 1" and "server.port=8081" in application.properties
-3. Start second instance of "service" with "service.instance.name=instance 2" and "server.port=8082" in application.properties
-4. Start "client"
-5. Curl: curl localhost:8085/api (e.g. observe response)
-6. Curl again: curl localhost:8085/api (again observe response)
-7. Once done, bring down all your instances
+2. Start "config-server"
+3. Start "config-client-app"
+4. Open browser, request http://localhost:8080
+5. Observe that configuration are loaded from "scf-config-repository" from "application.properties" and "config-client-app.properties"
+6. Optional: Change for instance "config-client-app.properties", issue http request -> curl -d '{}' localhost:8080/refresh -v | json_pp, request http://localhost:8080
+7. Once done, stop all instances
