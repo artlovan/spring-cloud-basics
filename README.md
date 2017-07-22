@@ -1,6 +1,7 @@
 # Ribbon Client Load Balancer
 
-Demo app to balance the load with @RibbonClient without service discovery.
+Demo app to balance the load with @RibbonClient without service discovery,
+with custom load distribution ConfigClass.
 
 1. Start first instance of ribbon-time-service on port 4444
 2. Start second instance of ribbon-time-service on port 5555
