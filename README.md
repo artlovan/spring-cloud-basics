@@ -1,10 +1,9 @@
-Usage:
-------
+# Ribbon Client Load Balancer
 
-1. Start "discovery-server"
-2. Start "config-server"
-3. Start "config-client-app"
-4. Open browser, request http://localhost:8080
-5. Observe that configuration are loaded from "scf-config-repository" from "application.properties" and "config-client-app.properties"
-6. Optional: Change for instance "config-client-app.properties", issue http request -> curl -d '{}' localhost:8080/refresh -v | json_pp, request http://localhost:8080
-7. Once done, stop all instances
+Demo app to balance the load with @RibbonClient without service discovery.
+
+1. Start first instance of ribbon-time-service on port 4444
+2. Start second instance of ribbon-time-service on port 5555
+3. Start an instance of ribbon-time-app
+4. hit $: curl localhost:8080, hit again (observe port in the response msg)
+5. Bring down all the instances
